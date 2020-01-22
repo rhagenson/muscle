@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>muscle manual</title>
+<link rel="stylesheet" type="text/css" href="manstyles.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50117757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body bgcolor="#E1E1E1">
+<div align="center">&nbsp;
+<table border="0" width="735" cellspacing="0" cellpadding="5"
+bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#E1E1E1"><span class="ManPath"><a href=
+ "index.html">MUSCLE manual</a></span></td>
+</tr>
+<tr>
+<td bgcolor="#006600"><span class="ManTopic">MUSCLE command-line option 
+reference</span></td>
+</tr>
+<tr>
+<td>
+<span class="ManText">&nbsp;<br>
+There are two types of command-line options: value options and flag options.
+</span>
+<p><span class="ManText"><b>Value options<br>
+</b>Value options are followed by the value of the given parameter, for example 
+&#8211;in <i>filename</i>.</span></p>
+<p><span class="ManText"><b>Flag options<br>
+</b>Flag options just stand for themselves, e.g. -quiet. </span></p>
+<p><span class="ManText"><b>Option syntax<br>
+</b>All options start with a dash (not two dashes!) followed by a long name. 
+There are no single-letter equivalents. Value options must be separated from 
+their values by white space in the command line. The order in which options are 
+given is irrelevant unless two options contradict, in which case the right-most 
+option silently wins.</span></p>
+<p><span class="ManText"><b>Common options<br>
+</b>&nbsp;</span><div align="center">
+<table border="0" width="78%" cellspacing="0" cellpadding="5">
+<tr>
+<td width="136" align="right" bgcolor="#E1E1E1"><span class=
+"ManText"><b>Option</b></span></td>
+<td width="8" bgcolor="#E1E1E1" align="center">&nbsp;</td>
+<td bgcolor="#E1E1E1" align="left"><span class="ManText"><b>Values</b></span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#FFFFCC">
+<span class="ManText">-in <i>filename</i></span></td>
+<td bgcolor="#FFFFCC" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#FFFFCC" valign="top" align="left"><span class="ManText">Sequences 
+to align. <a href="fasta_files.html">FASTA format</a>. Any gaps in the sequences 
+are discarded before aligning. Default read from standard input.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#E1E1E1" height="46">
+<span class="ManText">-out <i>filename</i></span></td>
+<td bgcolor="#E1E1E1" width="8" align="center" valign="top" height="46">
+&nbsp;</td>
+<td bgcolor="#E1E1E1" valign="top" align="left" height="46">
+<span class="ManText">Output file, default format is aligned FASTA. See also
+<a href="output_formats.html">output format options</a>. Default write to 
+standard output.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#FFFFCC">
+<span class="ManText">-maxiters <i>n</i></span></td>
+<td bgcolor="#FFFFCC" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#FFFFCC" valign="top" align="left"><span class="ManText">Maximum 
+number of <a href="iterations.html">iterations</a> to run. Default 16. Set to 2 
+for large datasets where refinement (iterations 3+) is too slow.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#E1E1E1">
+<span class="ManText">-in1 <i>filename<br>
+</i>-in2 <i>filename</i></span></td>
+<td bgcolor="#E1E1E1" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#E1E1E1" valign="top" align="left"><span class="ManText">Input 
+files for <a href="profprof.html">profile-profile alignment</a>, i.e. to align 
+two multiple alignments to each other. Aligned FASTA format.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#FFFFCC">
+<span class="ManText">-profile</span></td>
+<td bgcolor="#FFFFCC" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#FFFFCC" valign="top" align="left"><span class="ManText">Perform
+<a href="profprof.html">profile-profile alignment</a>, i.e. align two MSAs to 
+each other. Input files are -in1 and in2 (see above).<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#E1E1E1">
+<span class="ManText">-quiet</span></td>
+<td bgcolor="#E1E1E1" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#E1E1E1" valign="top" align="left"><span class="ManText">Do not 
+show progress messages.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#FFFFCC">
+<span class="ManText">-log <i>filename</i></span></td>
+<td bgcolor="#FFFFCC" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#FFFFCC" valign="top" align="left"><span class="ManText">Write 
+parameter information to the file.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#E1E1E1">
+<span class="ManText">-diags</span></td>
+<td bgcolor="#E1E1E1" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#E1E1E1" valign="top" align="left"><span class="ManText">Use
+<a href="diagonals.html">diagonal optimization</a>. This can significantly 
+improve speed with closely-related sequences. Disabled by default.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#FFFFCC">
+<span class="ManText">-maxhours <i>h</i></span></td>
+<td bgcolor="#FFFFCC" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#FFFFCC" valign="top" align="left"><span class="ManText">Maximim 
+time. If <i>h</i> hours have elpased, then complete the current
+<a href="iterations.html">iteration</a> and stop. Default no time limit.<br>
+&nbsp;</span></td>
+</tr>
+<tr>
+<td width="136" align="right" valign="top" bgcolor="#E1E1E1">
+<span class="ManText">-version</span></td>
+<td bgcolor="#E1E1E1" width="8" align="center" valign="top">
+&nbsp;</td>
+<td bgcolor="#E1E1E1" valign="top" align="left"><span class="ManText">Display 
+version and exit.<br>
+&nbsp;</span></td>
+</tr>
+</table>
+<p align="left"><span class="ManText"><b>Complete option reference<br>
+&nbsp; </b><a href="flagopts.html">Flag options</a><br>
+&nbsp; <a href="valueopts.html">Value options</a><br>
+&nbsp;</span></div>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

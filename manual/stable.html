@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>muscle manual</title>
+<link rel="stylesheet" type="text/css" href="manstyles.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50117757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body bgcolor="#E1E1E1">
+<div align="center">&nbsp;
+<table border="0" width="735" cellspacing="0" cellpadding="5"
+bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#E1E1E1"><span class="ManPath"><a href=
+ "index.html">MUSCLE manual</a></span></td>
+</tr>
+<tr>
+<td bgcolor="#006600"><span class="ManTopic">-stable bug</span></td>
+</tr>
+<tr>
+<td>
+<p>&nbsp;<span class="ManText"><br>
+<font face="Arial">The -stable option had a bug that I was not able
+        to understand or fix. Sometimes incorrect alignments were produced. I
+        don't know how often this happened, but I think it was probably pretty
+        rare because only one user noticed this over a&nbsp; five year period
+        when thousands of people were using MUSCLE.</font></span><p>
+<span class="ManText"><font face="Arial">I
+        have made a python script stable.py that can be used as a work-around.
+        Usage is:</font></span><p><span class="ManText"><font face="Arial">&nbsp; </font><font face="Courier New" size="2"><b>python
+        stable.py input.fasta aligned.fasta &gt; stable.fasta</b></font></span><p>
+<span class="ManText"><font face="Arial">Here,
+        input.fasta is the unaligned sequences used as input to MUSCLE, and
+        aligned.fasta is the output from MUSCLE. The stable.fasta file contains
+        the aligned sequences in the same order as the input file.</font></span><p>
+<span class="ManText"><font face="Arial"><a href="http://www.drive5.com/muscle/stable.tar.gz">Download
+        source code for stable.py</a>.<br>
+&nbsp;</font></span></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

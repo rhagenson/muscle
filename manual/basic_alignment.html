@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>muscle manual</title>
+<link rel="stylesheet" type="text/css" href="manstyles.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50117757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body bgcolor="#E1E1E1">
+<div align="center">&nbsp;
+<table border="0" width="735" cellspacing="0" cellpadding="5"
+bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#E1E1E1"><span class="ManPath"><a href=
+ "index.html">MUSCLE manual</a></span></td>
+</tr>
+<tr>
+<td bgcolor="#006600"><span class="ManTopic">Making a multiple sequence alignment 
+(MSA)</span></td>
+</tr>
+<tr>
+<td>
+<p class="MsoNormal"><span class="ManText"><br>
+Make an alignment and save to a file in FASTA format:</span></p>
+<p class="Code"><span class="ManCode">&nbsp; muscle -in seqs.fa -out seqs.afa</span></p>
+<p class="MsoNormal"><span class="ManText">Write alignment to the console in 
+CLUSTALW format (more readable than FASTA):</span></p>
+<p class="Code"><span class="ManCode">&nbsp; muscle -in seqs.fa -clw</span></p>
+<p class="MsoNormal"><span class="ManText"><b>Input file<br>
+</b>Specified using the -in option. Must be in <a href="fasta_files.html">FASTA 
+format</a>. If any gaps are present in the input file, they will be discarded 
+before making the alignment. If the -in option is not specified, or is specified 
+as - (a minus sign), then input is taken from standard input.</span></p>
+<p class="MsoNormal"><span class="ManText"><b>Output file<br>
+</b>Specified using the -out option. By default, the output is in
+<a href="fasta_files.html">FASTA format</a> with gaps added to align the 
+sequences. If the -out option is not specified, or is specified as - (minus 
+sign), then output is written to standard output. I use &quot;afa&quot; (aligned fasta) as 
+the conventional filename extension.</span></p>
+<p class="MsoNormal"><span class="ManText"><b>See also<br>
+&nbsp; </b><a href="output_formats.html">Output file formats</a><br>
+&nbsp; <a href="iterations.html">Iterations</a><br>
+&nbsp;</span></p>
+</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

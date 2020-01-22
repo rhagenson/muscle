@@ -1,0 +1,636 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>muscle manual</title>
+<link rel="stylesheet" type="text/css" href="manstyles.css">
+<style>
+<!--
+ table.MsoNormalTable
+	{mso-style-parent:"";
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	}
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	margin-left:0mm; margin-right:0mm; margin-top:0mm}
+-->
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50117757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body bgcolor="#E1E1E1">
+<div align="center">&nbsp;
+<table border="0" width="735" cellspacing="0" cellpadding="5"
+bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#E1E1E1"><span class="ManPath"><a href=
+ "index.html">MUSCLE manual</a></span></td>
+</tr>
+<tr>
+<td bgcolor="#006600"><span class="ManTopic">Flag options</span></td>
+</tr>
+<tr>
+<td>
+&nbsp;<span class="ManText"><br>
+<b>See also</b><br>
+&nbsp; <a href="options.html">Command line reference</a></span><br>
+&nbsp;<table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse: collapse" bordercolordark="#C0C0C0">
+	<thead>
+		<tr>
+			<td width="137" valign="top" style="width: 102.6pt; border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0mm; padding-bottom: 0mm">
+			<p class="MsoNormal" style="page-break-after:avoid">
+			<span class="ManText"><b>
+			<span style="font-size: 9.0pt; font-family: Arial,sans-serif">Flag 
+			option</span></b></span></td>
+			<td width="106" valign="top" style="width: 79.2pt; border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0mm; padding-bottom: 0mm">
+			<p class="MsoNormal" style="page-break-after:avoid">
+			<span class="ManText"><b>
+			<span style="font-size: 9.0pt; font-family: Arial,sans-serif">Set by 
+			default?</span></b></span></td>
+			<td width="348" valign="top" style="width: 261.0pt; border-left: medium none; border-right: medium none; border-top: medium none; border-bottom: 1.0pt solid windowtext; padding-left: 5.4pt; padding-right: 5.4pt; padding-top: 0mm; padding-bottom: 0mm">
+			<p class="MsoNormal" style="page-break-after:avoid">
+			<span class="ManText"><b>
+			<span style="font-size: 9.0pt; font-family: Arial,sans-serif">
+			Description</span></b></span></td>
+		</tr>
+	</thead>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">anchors</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">yes</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use anchor optimization in tree dependent 
+		refinement iterations.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">brenner</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use Steven Brenner's method for computing the root 
+		alignment.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">cluster</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Perform fast clustering of input sequences. Use 
+		the &#8211;<i>tree1</i> option to save the tree.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">dimer</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use dimer approximation for the SP score (faster, 
+		slightly less accurate).</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">clw</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Write output in CLUSTALW format (default is 
+		FASTA).</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">clwstrict</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Write output in CLUSTALW format with the &quot;CLUSTAL 
+		W (1.81)&quot; header rather than the MUSCLE version. This is useful when a 
+		post-processing step is picky about the file header.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">core</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">yes in muscle,</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no in muscled.</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Do not catch exceptions.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">diags</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use diagonal optimizations. Faster, especially for 
+		closely related sequences, but may be less accurate.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">diags1</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use diagonal optimizations in first iteration.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">diags2</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Use diagonal optimizations in second iteration.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">fasta</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">yes</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Write output in FASTA format.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">group</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">yes</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Group similar sequences together in the output. 
+		This is the default. See also &#8211;<i>stable</i>.</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">html</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">Write output in HTML format (default is FASTA).</span></p>
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr>
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">le</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt">
+		<p class="MsoNormal"><span class="ManText">maybe</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt">
+		<p class="MsoNormal"><span class="ManText">Use log-expectation profile 
+		score (VTML240). Alternatives are to use &#8211;<i>sp</i> or <i>&#8211;sv</i>. This 
+		is the default for amino acid sequences.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">msf</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Write output in MSF format 
+		(default is FASTA). Designed to be compatible with the GCG package.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">noanchors</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Disable anchor optimization. 
+		Default is &#8211;<i>anchors</i>.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">nocore</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no in muscle,</span></p>
+		<p class="MsoNormal"><span class="ManText">yes in muscled.</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Catch exceptions and give an 
+		error message if possible.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">phyi</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Write output in Phylip 
+		interleaved format.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">phys</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Write output in Phylip 
+		sequential format.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">profile</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Compute profile-profile 
+		alignment. Input alignments must be given using &#8211;<i>in1</i> and &#8211;<i>in2</i> 
+		options.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">quiet</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Do not display progress 
+		messages.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">refine</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Input file is already 
+		aligned, skip first two iterations and begin tree dependent refinement.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">refinew</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Refine an alignment by 
+		dividing it into non-overlapping windows and re-aligning each window. 
+		Typically used for whole-genome nucleotide alignments.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">sp</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Use sum-of-pairs protein 
+		profile score (PAM200). Default is &#8211;<i>le.</i></span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">spscore</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Compute alignment score of 
+		profile-profile alignment. Input alignments must be given using &#8211;<i>in1</i> 
+		and &#8211;<i>in2</i> options. These must be pre-aligned with gapped columns 
+		as needed, i.e. must be of the same length (have same number of 
+		columns).</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">spn</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">maybe</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Use sum-of-pairs nucleotide 
+		profile score. This is the only option for nucleotides, and is therefore 
+		the default. The substitution scores and gap penalty scores are 
+		&quot;borrowed&quot; from BLASTZ.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal" style="page-break-after:avoid">
+		<span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">stable</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Preserve input order of 
+		sequences in output file. Default is to group sequences by similarity (&#8211;<i>group</i>).</span></p>
+		<p class="MsoNormal"><span class="ManText"><b>
+		<span style="background: yellow">WARNING THIS OPTION WAS BUGGY AND IS 
+		NOT SUPPORTED IN v3.8.</span> </b>Go to this link for more information:&nbsp;
+		<a style="color: blue; text-decoration: underline; text-underline: single" href="stable.html">
+		/muscle/manual/stable.html</a></span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">sv</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Use sum-of-pairs profile 
+		score (VTML240). Default is &#8211;<i>le.</i></span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">termgaps4</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">yes</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Use 4-way test for treatment 
+		of terminal gaps. (Cannot be disabled in this version).</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">termgapsfull</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Terminal gaps penalized with 
+		full penalty.</span></p>
+		<p class="MsoNormal"><span class="ManText">[1] Not fully supported in 
+		this version.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">termgapshalf</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">yes</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Terminal gaps penalized with 
+		half penalty.</span></p>
+		<p class="MsoNormal"><span class="ManText">[1] Not fully supported in 
+		this version.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">
+		termgapshalflonger</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Terminal gaps penalized with 
+		half penalty if gap relative to </span></p>
+		<p class="MsoNormal"><span class="ManText">longer sequence, otherwise 
+		with full penalty.</span></p>
+		<p class="MsoNormal"><span class="ManText">[1] Not fully supported in 
+		this version.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">verbose</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Write parameter settings and 
+		progress messages to log file.</span></p>
+		<p class="MsoNormal"><span class="ManText">&nbsp;</span></td>
+	</tr>
+	<tr style="height: 6.25pt">
+		<td width="137" valign="top" style="width:102.6pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">
+		<span style="font-size: 8.0pt; font-family: Courier New">version</span></span></td>
+		<td width="106" valign="top" style="width:79.2pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">no</span></td>
+		<td width="348" valign="top" style="width:261.0pt;padding:0mm 5.4pt 0mm 5.4pt;
+  height:6.25pt">
+		<p class="MsoNormal"><span class="ManText">Write version string to 
+		stdout and exit.</span></td>
+	</tr>
+</table>
+<p class="MsoNormal"><span class="ManText"><br>
+&nbsp;</span></p>
+&nbsp;</td>
+</tr>
+</table>
+</div>
+</body>
+</html>

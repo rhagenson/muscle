@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0"><meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii">
+<title>muscle manual</title>
+<link rel="stylesheet" type="text/css" href="manstyles.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-50117757-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body bgcolor="#E1E1E1">
+<div align="center">&nbsp;
+<table border="0" width="735" cellspacing="0" cellpadding="5"
+bgcolor="#FFFFFF">
+<tr>
+<td bgcolor="#E1E1E1"><span class="ManPath"><a href=
+ "index.html">MUSCLE manual</a></span></td>
+</tr>
+<tr>
+<td bgcolor="#006600"><span class="ManTopic">Big alignments, do they make sense?</span></td>
+</tr>
+<tr>
+<td>
+<span class="ManText">&nbsp;<br>
+Probably the most common question I get about MUSCLE is &#8220;Im trying to align [<em>big 
+number here</em>] sequences and I'm running out of memory. What should I do?&#8221;. 
+There are various techniques that can reduce the amount of memory and time 
+needed to make very large alignments, and I'll describe them below, but a more 
+important question may be: <em>why</em> are you making the alignment? Is this 
+the best approach to analyzing your sequences? Occasionally I&#8217;ve heard some good 
+answers, and this is inspiring me to work on better methods for building and 
+analyzing large alignments, but I suspect that sometimes people are doing this 
+because this is the way sequence analysis has traditionally been done, without 
+giving enough attention to the limitations of multiple alignment methods.</span><p>
+<span class="ManText">The key question is, can a multiple alignment represent 
+homology between letters accurately enough to enable robust inferences to be 
+made by downstream tools? It is almost impossible to review an alignment that 
+large by eye, so inevitably automated tools are used. For example, if you want 
+to estimate a phylogenetic tree, then will the tree be good enough to be 
+informative? (Similar questions apply to building large trees, but let&#8217;s not go 
+there now).</span></p>
+<p><span class="ManText">The answer is, probably not: it is almost never 
+possible to build a good multiple alignment of that size. The matrix format (row 
+and column) of a multiple alignment implicitly assumes that the only important 
+mutations are substitutions, insertions of short random sequences and deletions. 
+This is a reasonable simplification for a small number of closely related 
+sequences, but is increasingly dubious as the divergence or the number of 
+sequences increases.</span></p>
+<p><span class="ManText">The most common mutation producing short&nbsp; insertions is 
+tandem duplication. Tandem duplications tend to expand into arrays with three or 
+more copies of repeated motifs. Tandems cause 2:1 homology (or n:1 for arrays)&nbsp; 
+between a sequence that has the duplication and a sequence that does not, and a 
+multiple alignment cannot represent this because homology is implicitly required 
+to be either 1:1 or non-existent. If your definition of alignment correctness is 
+that homologous residues must be in the same column if and only if they are 
+homologous, then correctness is impossible if tandems are present. If tandems 
+are relatively rare, then it is reasonable to ignore the problem and arbitrarily 
+choose one segment to align. But in more variable regions (e.g., surface loops 
+in proteins or DNA that is evolving neutrally or under weak constraint), they 
+are probably common. In that case, repeated, overlapping cycles of tandem 
+duplications, inversions and deletions presumably leave a tangled mess where 
+inference of homologous residues is impossible due to information loss. I call 
+this &#8220;churn&#8221;. Further, even if you could infer homology, you would not be able 
+to represent all the relationships in a conventional matrix multiple alignment 
+form. Tandems and inversions obviously can&#8217;t be represented. Overlapping 
+inversions can induce a translocation on the same strand (I guess a figure would 
+be helpful, let me know if this isn&#8217;t clear). Global multiple alignment assumes 
+that the order of letters is preserved, so translocations can&#8217;t be represented 
+either. A potentially interesting special case is insertions at the same locus 
+in independent lineages, as pointed out by Ari L&ouml;ytynoja and Nick Goldman in a 
+series of recent papers. These papers have many problems, which I hope to 
+discuss in elsewhere (maybe in a later blog post), but here I want to point out 
+that they overlook that the most likely cause of such insertions is tandem 
+duplications, in which case the inserted bases will be homologous despite having 
+been inserted independently. Such events would complicate the definition of a 
+correct alignment and the inference of evolutionary history, though it should be 
+noted that L&ouml;ytynoja and Goldman fail to present any evidence that independent 
+insertions at the same locus is common enough to be significant in this context. 
+My own view is that independent insertions at a single locus is a minor example 
+among several types of evolutionary event that undermine the traditional 
+multiple alignment model.</span></p>
+<p><span class="ManText">Let's suppose that you have 10,000 sequences that are 
+miraculously immune from tandem duplications, inversions and translocations, 
+i.e. the evolutionary processes that mess up multiple alignments. Now can you 
+make a good alignment? Sorry, but still probably not. Now we run into 
+limitations of practical algorithms and problems due to information loss. Most 
+popular global multiple alignment algorithms, including MUSCLE, PROBCONS, 
+CLUSTALW, T-Coffee and others, are based on iterating global pair-wise 
+alignment. These methods implicitly assume the simplified model of evolution 
+(substitutions, deletions and short random insertions) as described above. The 
+only available information is sequence similarity, and this has unavoidable 
+limitations. As sequences diverge, the placement of gaps gets less certain, and 
+the probability of an error in the positioning of a given gap endpoint 
+increases. This can happen even in closely related sequences. Suppose your 
+sequence is &#8230;ACCG&#8230;, and one of the C&#8217;s is deleted, leaving ACG. You can&#8217;t tell 
+which C it was, and the alignment must make an arbitrary choice. If two other 
+sequences have &#8230;ACG&#8230;, the parsimonious assumption (assuming it was in fact a 
+deletion) is that one of the Cs was deleted in the common ancestor. That&#8217;s the 
+best guess, but it will sometimes be wrong. Maybe there was an independent 
+deletion at the same locus in two different lineages. Maybe one lineage deleted 
+C1 and the other deleted C2. It is impossible in principle to distinguish 
+between these histories, so sometimes the alignment will be wrong. Every time 
+you add a sequence, there is some probability of introducing new errors. The 
+probability (call it Pe) of introducing an error increases with divergence, but 
+is never zero &#8212; even if the sequences are 100% identical, you can&#8217;t rule out 
+that there are intermediate mutations that canceled each other out. So with 
+10,000 sequences, you&#8217;ll going to have at least 10,000 x Pe errors, and this is 
+going to be a big number even if Pe is small. The problem is much worse than 
+this because each time an error is introduced, it propagates to all higher 
+levels in the tree due to the &#8216;progressive&#8217; approach taken by all popular 
+methods that are capable of making large alignments.</span></p>
+<p><span class="ManText">So what can you do? Using a 64-bit build of MUSCLE may 
+allow you to build a single multiple alignment, if that does make sense after 
+all.</span></p>
+<p><span class="ManText">Other approaches might make sense, depending on what 
+you want to use the alignment for. In the 16S rRNA world, several methods use 
+reference multiple alignments provided by databases such as Greengenes, RDP or 
+SILVA. One method for producing these alignments is the NAST aligner, which 
+deliberately introduces errors (!) in order to mitigate the problem of the 
+growing number of columns in a very large alignment. I believe this is the wrong 
+approach: NAST-like alignments are basically a response to the slow performance 
+of search and <em>de novo</em> alignment programs, and I believe that the 
+improved performance of the <a href="http://www.drive5.com/usearch">USEARCH 
+algorithm</a> enables better solutions to problems such as chimera detection 
+where reference alignments have traditionally been used.</span></p>
+<p><span class="ManText">One option to consider is to reduce the data size by 
+clustering. If you have 10,000 sequences, probably many of them are in closely 
+related subfamilies. Then it makes sense to cluster at, say, 95% or 90% identity 
+using <a href="http://www.drive5.com/usearch/manual/uclust_algo.html">UCLUST</a>. 
+That might leave a few hundred sequences to align, which would reveal the most 
+highly conserved regions but might fail to give a meaningful alignment in the 
+more variable regions. If needed, you could independently align members of each 
+cluster to each other. I&#8217;m always interested to discuss this kind of problem, 
+and I'm actively working on improved solutions.<br>
+&nbsp; </span></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

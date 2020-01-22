@@ -1,0 +1,8 @@
+span.ManTopic { font-family: Tahoma; font-size: 14pt; color: #FFFFFF; font-weight: bold; 
+                }
+span.ManCode { font-family: Courier New; font-size: 10pt;  }
+span.ManText  { font-family: Tahoma; font-size: 10pt; margin-top:5; margin-bottom:5 }
+span.ManTOC  { font-family: Tahoma; font-size: 12pt; color:#800000; font-weight:bold }
+span.ManIndText  { font-family: Tahoma; font-size: 10pt; }
+
+span.ManPath  { font-family: Tahoma; font-size: 10pt; margin-top:5; margin-bottom:5; color:#006600; font-weight:bold }
